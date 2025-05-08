@@ -1,0 +1,57 @@
+[ ] corriger le bug creation de compte avec le nom d'un compte dejà existant
+[X] créer un systeme de logs efficace
+[X] ameliorer les notifications
+[X] faire un systeme de roles efficace
+[X] utiliser stockage de "musicalité" pour le dossier uploads
+
+
+[X] hash msg = id msg
+[X] suivi notifs lues = notif_lue.php?redirect_url_=qqchs
+[X] compteur notif au dessus de la pdp via api
+[X] /mute
+[X] /ismute
+[X] /demute
+[*] encadré vert du /mute (alerte javascript temporaire)
+[X] autolink(autoimg(commande_bot))
+[X] @ping pseudo + updates notifs @pseudo
+[X] /suppr id_msg
+[X] commande wp-cli creation de salon
+[ ] wp-cli bloqué pour les non-admins
+[X] envoi msg ajax en arriere plan sans reload
+[X] roles multiping
+[X] commandes admin
+[X] wpcli requete sql sortie tableau
+[ ] /uptime
+[X] /date_derniere_connection @pseudo
+[X] /date_premiere_connection @pseudo
+[X] /date_creation_compte @pseudo
+[X] /stats_user salon @pseudo
+[X] liste des connectés (30 secondes depuis le dernier message)
+[X] pastille connecté
+[ ] plusieurs pastilles de roles en même temps
+[ ] affichage connectés en train d'ecrire
+[ ] securiser l'api (requetes sql non controlées)
+[X] systeme d'argent
+[ ] profil
+[X] spoilers
+[X] bip lors de nouveau message
+[X] bip lors de nouvelle mention
+[X] /supprnotifs
+[ ] /ban wp-cli
+[ ] /ban msg
+[X] gagner argent lors de message
+[ ] toute l'economie des fichiers
+[X] /report msg
+[ ] /report faux fichier
+[X] corriger bug timezone php differente de timezone sql
+[X] /donner
+[X] compteur argent
+[ ] emojis personnalisés
+[ ] ordonner les users par roles, comme sur discord
+[ ] corriger bug : des boutons DU MENU DEPLOYABLE sur tous les fichiers du repertoire http://localhost/chat/uploads/
+[ ] unifier le tableau "supprimer liste uploader" dans uploads/ en un seul fichier qu'on inclut
+[ ] corriger la pp qui charge pas si on est dans des sous dossiers (uploads): le bug vient de : <?php if (file_exists($imagePath)): ?>
+[ ] corriger qu'on puisse executer les php qu'on upload [DANGEROSITE CRITIQUE /!\]
+[ ] corriger le bug qui fait qu'on peut overwrite un fichier en uploadant un du même nom [DANGEROSITE CRITIQUE /!\]
+[ ] <!DOCTYPE html> dans tout
+[ ] BBCode dans emojis.php

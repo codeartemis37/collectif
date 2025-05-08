@@ -1,0 +1,96 @@
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2; /* Couleur de fond */
+            color: #333333; /* Couleur du texte */
+            margin: 0;
+            padding: 0;
+        }
+        .content-container {
+            position: relative;
+            padding: 30px;
+            margin: 20px 20px 0 20px; /* Modification de la marge */
+            max-width: 800px;
+            background-color: #ffffff; /* Couleur du fond des conteneurs */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Ombre légère */
+            text-align: center;
+        }
+        .content-container h2 {
+            color: #000; /* Couleur du titre */
+        }
+        .content-container p {
+            color: #666666; /* Couleur du texte */
+        }
+        .content-container a {
+            color: #e67e22; /* Couleur du lien */
+            text-decoration: none;
+        }
+        .content-container a:hover {
+            text-decoration: underline;
+        }
+        .carousel-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            
+            width: 30%; /* Largeur proportionnelle à la taille de l'écran */
+            max-width: 600px; /* Largeur maximale du carrousel */
+            text-align: center;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-container {
+                position: static;
+                width: 5%; /* Largeur de 100% sur les écrans de petite taille */
+                margin-top: 20px;
+            }
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel img {
+            max-width: 100%;
+            height: auto;
+            flex: 0 0 100%; /* Largeur fixe pour chaque image */
+        }
+        .carousel-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        #menu {
+            background-color: rgb(18, 34, 65);
+            padding: 10px;
+            text-align: center;
+            display: none;
+        }
+        #menu ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        #menu ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        #menu ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        #menu ul li a:hover {
+            text-decoration: underline;
+        }
+        #toggle-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }

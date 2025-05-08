@@ -1,0 +1,88 @@
+    <style>
+        /* Styles CSS pour la mise en page */
+        .carousel-container {
+            max-width: 600px;
+            text-align: center;
+            overflow: hidden;
+            margin-left: 0%;
+            position: absolute;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel img {
+            max-width: 100%;
+            height: auto;
+            flex: 0 0 100%; /* Largeur fixe pour chaque image */
+        }
+        .carousel-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="news/réunion.png" alt="Image 1">
+            <img src="news/alerte.png" alt="Image 2">
+            <img src="news/rip.jpg" alt="Image 3">
+        </div>
+        <button class="carousel-button" id="prevBtn">Précédent</button>
+        <button class="carousel-button" id="nextBtn">Suivant</button>
+    </div>
+    <script>
+        // JavaScript pour faire défiler les images du carrousel
+        const carousel = document.querySelector('.carousel');
+        const images = document.querySelectorAll('.carousel img');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentIndex = 0;
+        let isAnimating = false;
+
+        // Fonction pour afficher l'image suivante
+        function nextImage() {
+            if (!isAnimating) {
+                isAnimating = true;
+                currentIndex = (currentIndex + 1) % images.length;
+                updateCarousel();
+                setTimeout(() => {
+                    isAnimating = false;
+                }, 500); // Durée de l'animation en millisecondes
+            }
+        }
+
+        // Fonction pour afficher l'image précédente
+        function prevImage() {
+            if (!isAnimating) {
+                isAnimating = true;
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updateCarousel();
+                setTimeout(() => {
+                    isAnimating = false;
+                }, 500); // Durée de l'animation en millisecondes
+            }
+        }
+
+        // Fonction pour défilement automatique toutes les 5 secondes
+        function autoScroll() {
+            nextImage();
+            setTimeout(autoScroll, 5000); // Défilement automatique toutes les 5 secondes
+        }
+
+        // Démarrez le défilement automatique au chargement de la page
+        setTimeout(autoScroll, 5000);
+
+        // Met à jour l'affichage du carrousel
+        function updateCarousel() {
+            const offset = -currentIndex * 100; // Largeur de chaque image
+            carousel.style.transform = `translateX(${offset}%)`;
+        }
+
+        // Gestionnaires d'événements pour les boutons
+        nextBtn.addEventListener('click', nextImage);
+        prevBtn.addEventListener('click', prevImage);
+    </script>

